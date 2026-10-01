@@ -1,0 +1,12 @@
+[package]
+name = "reflow-git"
+description = "Thin Git integration: runs the git CLI and parses its porcelain output"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3"

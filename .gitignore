@@ -1,0 +1,9 @@
+node_modules/
+target/
+dist/
+*.log
+.idea/
+apps/desktop/src-tauri/gen/
+fixtures/**/out/
+.reflow/
+apps/desktop/src-tauri/resources/preview-engine/node_modules/

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ReFlow Motion (browser harness)</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Dev harness: runs the UI in a plain browser against dev/bridge.mjs instead of the Tauri backend. -->
+    <script type="module">
+      import "/dev/mock-tauri.js";
+      import "/src/main.tsx";
+    </script>
+  </body>
+</html>

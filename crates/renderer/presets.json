@@ -1,0 +1,79 @@
+[
+  {
+    "id": "youtube-1080",
+    "name": "YouTube / Web 1080p",
+    "description": "H.264, high quality, plays on every browser, phone and player. The safe default.",
+    "tags": ["web", "windows", "mac", "linux", "mobile"],
+    "settings": { "codec": "h264", "crf": 18, "x264_preset": "slow", "pixel_format": "yuv420p", "color_space": "bt709", "audio_codec": "aac", "audio_bitrate": "192k" }
+  },
+  {
+    "id": "youtube-4k",
+    "name": "YouTube 4K (2× size)",
+    "description": "Doubles the composition size (1080p becomes 4K). Heavy: expect long renders and big files.",
+    "tags": ["web", "windows", "mac"],
+    "settings": { "codec": "h264", "scale": 2, "crf": 17, "x264_preset": "medium", "pixel_format": "yuv420p", "color_space": "bt709", "audio_codec": "aac", "audio_bitrate": "256k" }
+  },
+  {
+    "id": "social-fast",
+    "name": "Social media (fast)",
+    "description": "H.264 tuned for speed. Good for drafts and client previews.",
+    "tags": ["web", "mobile"],
+    "settings": { "codec": "h264", "crf": 23, "x264_preset": "veryfast", "pixel_format": "yuv420p", "color_space": "bt709", "audio_codec": "aac", "audio_bitrate": "128k" }
+  },
+  {
+    "id": "small-share",
+    "name": "Small file (chat, email)",
+    "description": "Half resolution and strong compression, usually a few MB.",
+    "tags": ["web", "mobile"],
+    "settings": { "codec": "h264", "scale": 0.5, "crf": 28, "x264_preset": "veryfast", "pixel_format": "yuv420p", "audio_codec": "aac", "audio_bitrate": "96k" }
+  },
+  {
+    "id": "apple-hevc",
+    "name": "Apple devices (HEVC)",
+    "description": "H.265: smaller files than H.264 at the same quality. Plays natively on macOS, iOS and recent Windows/Android.",
+    "tags": ["mac", "ios", "mobile"],
+    "settings": { "codec": "h265", "crf": 22, "pixel_format": "yuv420p", "color_space": "bt709", "audio_codec": "aac", "audio_bitrate": "192k" }
+  },
+  {
+    "id": "prores-422hq",
+    "name": "Edit master: ProRes 422 HQ",
+    "description": "Near-lossless intermediate for Premiere, DaVinci Resolve and Final Cut. Very large files.",
+    "tags": ["editing", "mac", "windows"],
+    "settings": { "codec": "prores", "prores_profile": "hq", "pixel_format": "yuv422p10le", "color_space": "bt709", "audio_codec": "pcm-16" }
+  },
+  {
+    "id": "prores-4444-alpha",
+    "name": "ProRes 4444 with transparency",
+    "description": "Keeps the alpha channel for compositing in editors and VFX tools.",
+    "tags": ["editing", "alpha", "mac", "windows"],
+    "settings": { "codec": "prores", "prores_profile": "4444", "pixel_format": "yuva444p10le", "image_format": "png", "audio_codec": "pcm-16" }
+  },
+  {
+    "id": "webm-alpha",
+    "name": "WebM with transparency",
+    "description": "VP9 with alpha for web overlays and browser-based players (Chrome, Firefox, Edge).",
+    "tags": ["web", "alpha", "windows", "linux"],
+    "settings": { "codec": "vp9", "crf": 30, "pixel_format": "yuva420p", "image_format": "png", "audio_codec": "opus" }
+  },
+  {
+    "id": "gif",
+    "name": "Animated GIF",
+    "description": "Half size, every other frame, loops forever. GIFs get big quickly: keep them short.",
+    "tags": ["web", "chat"],
+    "settings": { "codec": "gif", "scale": 0.5, "every_nth_frame": 2 }
+  },
+  {
+    "id": "png-sequence",
+    "name": "PNG image sequence",
+    "description": "One numbered PNG per frame in a folder, for VFX, texture work or your own encoder.",
+    "tags": ["editing", "alpha", "vfx"],
+    "settings": { "codec": "h264", "image_sequence": true, "image_format": "png" }
+  },
+  {
+    "id": "audio-wav",
+    "name": "Audio only: WAV",
+    "description": "Uncompressed audio track of the composition.",
+    "tags": ["audio"],
+    "settings": { "codec": "wav" }
+  }
+]

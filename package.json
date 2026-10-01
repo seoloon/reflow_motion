@@ -1,0 +1,10 @@
+{
+  "name": "reflow-motion",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "pnpm --filter @reflow/desktop tauri dev",
+    "test": "pnpm --filter @reflow/desktop test && cargo test --workspace",
+    "typecheck": "pnpm --filter @reflow/desktop typecheck"
+  }
+}
